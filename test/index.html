@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Values</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../node_modules/mocha/mocha.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script>CLOSURE_NO_DEPS = true;</script>
+    <script src="../vendor/google/base.js"></script>
+    <script src="../node_modules/unexpected/unexpected.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
+
+    <script src="../src/featuresettings.js"></script>
+    <script src="../src/font.js"></script>
+    <script src="../src/unicoderange.js"></script>
+    <script src="../src/src.js"></script>
+    <script>
+      mocha.ui('bdd');
+
+      expect = weknowhow.expect;
+    </script>
+    <script src="./featuresettings-test.js"></script>
+    <script src="./font-test.js"></script>
+    <script src="./unicoderange-test.js"></script>
+    <script src="./src-test.js"></script>
+    <script>
+      window.onload = function () {
+        mocha.run();
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "cssvalue",
+  "version": "0.0.1",
+  "description": "Parsers (and generators) for common CSS values.",
+  "directories": {
+    "test": "test"
+  },
+  "repository": "",
+  "author": "Bram Stein <b.l.stein@gmail.com> (http://www.bramstein.com)",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "=2.2.1",
+    "unexpected": "=6.4.0",
+    "grunt": "=0.4.5",
+    "grunt-contrib-clean": "=0.6.0",
+    "grunt-contrib-jshint": "=0.11.1",
+    "grunt-closurecompiler": "=0.9.9",
+    "extend": "^2.0.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}
