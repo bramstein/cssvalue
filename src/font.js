@@ -89,7 +89,7 @@ goog.scope(function () {
           }
         } while (input.charAt(index - 2) === '\\');
 
-        result.family.push(input.slice(i, index));
+        result.family.push(input.slice(i + 1, index - 1));
 
         i = index - 1;
         state = states.FONT_FAMILY;

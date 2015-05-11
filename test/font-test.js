@@ -26,14 +26,14 @@ describe('Font', function () {
     });
 
     it('handles quoted family names correctly', function () {
-      expect(Font.parse('12px "Times New Roman"'), 'to equal', { size: '12px', family: ['"Times New Roman"'] });
-      expect(Font.parse("12px 'Times New Roman'"), 'to equal', { size: '12px', family: ["'Times New Roman'"] });
+      expect(Font.parse('12px "Times New Roman"'), 'to equal', { size: '12px', family: ['Times New Roman'] });
+      expect(Font.parse("12px 'Times New Roman'"), 'to equal', { size: '12px', family: ["Times New Roman"] });
 
-      expect(Font.parse('12px "Times\\\' New Roman"'), 'to equal', { size: '12px', family: ["\"Times\\\' New Roman\""] });
-      expect(Font.parse("12px 'Times\\\" New Roman'"), 'to equal', { size: '12px', family: ['\'Times\\\" New Roman\''] });
+      expect(Font.parse('12px "Times\\\' New Roman"'), 'to equal', { size: '12px', family: ["Times\\\' New Roman"] });
+      expect(Font.parse("12px 'Times\\\" New Roman'"), 'to equal', { size: '12px', family: ['Times\\\" New Roman'] });
 
-      expect(Font.parse('12px "Times\\\" New Roman"'), 'to equal', { size: '12px', family: ['"Times\\\" New Roman"'] });
-      expect(Font.parse("12px 'Times\\\' New Roman'"), 'to equal', { size: '12px', family: ["'Times\\\' New Roman'"] });
+      expect(Font.parse('12px "Times\\\" New Roman"'), 'to equal', { size: '12px', family: ['Times\\\" New Roman'] });
+      expect(Font.parse("12px 'Times\\\' New Roman'"), 'to equal', { size: '12px', family: ["Times\\\' New Roman"] });
     });
 
     it('handles unquoted identifiers correctly', function () {
