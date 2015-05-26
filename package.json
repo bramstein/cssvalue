@@ -1,6 +1,6 @@
 {
   "name": "cssvalue",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Parsers (and generators) for common CSS values.",
   "directories": {
     "test": "test"
