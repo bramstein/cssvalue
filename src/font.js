@@ -78,6 +78,9 @@ goog.scope(function () {
     var buffer = '',
         result = [];
 
+    // TODO: This can be simplified now that we're using
+    // the browsers parser (it'll either reject bad font
+    // declarations or fix them up).
     for (var i = 0; i < input.length; i++) {
       var c = input.charAt(i);
 
