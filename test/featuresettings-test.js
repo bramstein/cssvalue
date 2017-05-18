@@ -6,6 +6,13 @@ describe('FeatureSettings', function () {
       expect(FeatureSettings.parse('"liga"'), 'to equal', { liga: 1 });
     });
 
+    it('parses shorter tags', function () {
+      expect(FeatureSettings.parse('"A   "'), 'to equal', { 'A   ': 1 });
+      expect(FeatureSettings.parse('"A"'), 'to equal', { 'A': 1 });
+      expect(FeatureSettings.parse('"AL"'), 'to equal', { 'AL': 1 });
+      expect(FeatureSettings.parse('"ALL"'), 'to equal', { 'ALL': 1 });
+    });
+
     it('parses multiple features', function () {
       expect(FeatureSettings.parse('"liga", "calt"'), 'to equal', { liga: 1, calt: 1 });
     });
@@ -19,11 +26,14 @@ describe('FeatureSettings', function () {
 
     it('ignores invalid features', function () {
       expect(FeatureSettings.parse('"ligatures"'), 'to equal', {});
-      expect(FeatureSettings.parse('"l" 1'), 'to equal', {});
     });
 
     it('parses multiple values with index', function () {
       expect(FeatureSettings.parse('"liga" on, "swsh" 2'), 'to equal', { liga: 1, swsh: 2 });
+    });
+
+    it('parses an empty string', function () {
+      expect(FeatureSettings.parse(''), 'to equal', {});
     });
   });
 

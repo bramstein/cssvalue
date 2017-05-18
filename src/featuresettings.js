@@ -31,7 +31,7 @@ goog.scope(function () {
         result = {};
 
     for (var i = 0; i < features.length; i++) {
-      var match = /^"([\u0020-\u007e]{4})"(?:\s+(\d+|on|off))?$/i.exec(features[i]);
+      var match = /^"([\u0020-\u007e]{1,4})"(?:\s+(\d+|on|off))?$/i.exec(features[i]);
 
       if (match) {
         if (match[2]) {
