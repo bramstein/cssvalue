@@ -1,14 +1,13 @@
 {
   "name": "cssvalue",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Parsers (and generators) for common CSS values.",
   "directories": {
     "test": "test"
   },
   "repository": "",
   "author": "Bram Stein <b.l.stein@gmail.com> (http://www.bramstein.com)",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "=2.2.1",
     "unexpected": "=6.4.0",
